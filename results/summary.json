@@ -1,0 +1,138 @@
+{
+  "change": {
+    "countries": 141,
+    "rose": 86,
+    "top": {
+      "Serbia": 1.88,
+      "Bulgaria": 1.72,
+      "Kosovo": 1.69,
+      "Romania": 1.6,
+      "Bosnia and Herzegovina": 1.57
+    },
+    "bottom": {
+      "Afghanistan": -2.59,
+      "Zimbabwe": -1.48,
+      "Venezuela": -1.28,
+      "Lebanon": -1.21,
+      "Sierra Leone": -1.07
+    },
+    "sd_2012": 1.104,
+    "sd_2025": 1.136
+  },
+  "beyond_factors": {
+    "top": {
+      "Venezuela": 1.54,
+      "Guatemala": 1.14,
+      "Costa Rica": 1.07,
+      "Mozambique": 1.02,
+      "Mexico": 0.98,
+      "Honduras": 0.9,
+      "El Salvador": 0.82,
+      "Niger": 0.8
+    },
+    "bottom": {
+      "Hong Kong SAR of China": -1.46,
+      "Sri Lanka": -1.39,
+      "Botswana": -1.26,
+      "Egypt": -1.09,
+      "Sierra Leone": -1.05,
+      "Afghanistan": -1.02,
+      "Tanzania": -1.01,
+      "Cambodia": -0.96
+    },
+    "by_region": {
+      "South Asia": -0.5,
+      "Middle East, North Africa, Afghanistan & Pakistan": -0.23,
+      "East Asia & Pacific": -0.2,
+      "Sub-Saharan Africa ": -0.07,
+      "Europe & Central Asia": -0.01,
+      "North America": 0.07,
+      "Latin America & Caribbean ": 0.59
+    }
+  },
+  "types": {
+    "k": 3,
+    "silhouette": {
+      "3": 0.277,
+      "4": 0.273,
+      "5": 0.214,
+      "6": 0.209
+    }
+  },
+  "independent_model": {
+    "countries": 141,
+    "r2_gdp_only": 0.632,
+    "r2_three": 0.67,
+    "coef": {
+      "Intercept": [
+        -1.9531,
+        0.5088
+      ],
+      "log_gdp": [
+        0.6819,
+        0.1274
+      ],
+      "life_expectancy": [
+        0.0167,
+        0.0176
+      ],
+      "unemployment": [
+        -0.0376,
+        0.0107
+      ]
+    },
+    "gdp_only_slope": [
+      0.79,
+      0.052
+    ]
+  },
+  "easterlin": {
+    "cross_section_2025": {
+      "slope": 0.79,
+      "ci95": [
+        0.688,
+        0.891
+      ],
+      "countries": 144
+    },
+    "first_difference_2012_2025": {
+      "slope": 1.494,
+      "ci95": [
+        0.917,
+        2.071
+      ],
+      "countries": 138,
+      "mean_d_log_gdp": 0.223
+    },
+    "fixed_effects_5_windows": {
+      "slope": 1.404,
+      "ci95": [
+        0.745,
+        2.062
+      ],
+      "observations": 727
+    },
+    "robustness": {
+      "gdp_grew_only": {
+        "slope": 1.478,
+        "ci95": [
+          0.793,
+          2.163
+        ],
+        "countries": 120
+      },
+      "without_5_collapses": {
+        "slope": 1.256,
+        "ci95": [
+          0.745,
+          1.767
+        ],
+        "countries": 135
+      },
+      "huber_robust_regression": {
+        "slope": 1.502,
+        "se": 0.224
+      }
+    }
+  }
+}
